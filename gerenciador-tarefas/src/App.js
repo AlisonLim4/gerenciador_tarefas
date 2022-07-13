@@ -10,12 +10,12 @@ function App() {
   const [tasks, setTasks] = useState([
     {
       id: '1',
-      tittle: 'Estudar Programação',
+      title: 'Estudar Programação',
       completed: false,
     },
     {
       id: '2',
-      tittle: 'Estudar inglês',
+      title: 'Estudar inglês',
       completed: true,
     },
   ]);
@@ -23,26 +23,25 @@ function App() {
   const handleTaskClick = (taskId) => {
     const newTasks = tasks.map((task) => {
       if (task.id === taskId) return { ...task, completed: !task.completed };
-      else {
-        return task;
-      }
-      setTasks(newTasks);
+
+      return task;
     });
+    setTasks(newTasks);
   };
 
-  const handleTaskAddition = (taskTittle) => {
-    if (String(taskTittle).length !== 0) {
+  const handleTaskAddition = (taskTitle) => {
+    if (String(taskTitle).length !== 0) {
       const newTasks = [
         ...tasks,
         {
-          tittle: taskTittle,
+          title: taskTitle,
           id: uuidv4(),
           completed: false,
         },
       ];
       setTasks(newTasks);
     } else {
-      window.alert('Você nao pode inserir uma task vazia!');
+      window.alert('Você nao pode inserir uma tarefa sem nome!');
     }
   };
 
