@@ -8,4 +8,9 @@
   color: #444;
   cursor: pointer;
   border: none;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background-color: #444;
+  color:chartreuse;
 }

@@ -2,11 +2,18 @@ import React from 'react';
 import './Tasks.css';
 import Task from './Task';
 
-const Tasks = ({ tasks, handleTaskClick }) => {
+const Tasks = ({ tasks, handleTaskClick, handleTaskDeletion }) => {
   return (
     <>
       {tasks.map((task) => {
-        return <Task task={task} handleTaskClick={handleTaskClick} />;
+        return (
+          <Task
+            key={task.id}
+            task={task}
+            handleTaskClick={handleTaskClick}
+            handleTaskDeletion={handleTaskDeletion}
+          />
+        );
       })}
     </>
   );
