@@ -1,3 +1,11 @@
+# Descrição
+Gerenciador de tarefas utilizando React, que é populado através de API.
+É possível adicionar uma nova tarefa, remover uma tarefa existente da lista, verificar detalhes de uma tarefa,
+e sinalizar se a tarefa está concluída ao clickar no título da mesma.
+Nesse pequeno proejeto foi feito uso de React Hooks
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
